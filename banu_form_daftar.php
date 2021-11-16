@@ -167,8 +167,8 @@
                             </p>
                             <p>
                                 <label for="bahan_bakar">Bahan Bakar: </label>
-                                <label><input type="radio" name="bahan_bakar" value="bensin"> Bensin</label>
-                                <label><input type="radio" name="bahan_bakar" value="solar"> Solar</label>
+                                <label><input type="radio" name="bahan_bakar" value="Bensin"> Bensin</label>
+                                <label><input type="radio" name="bahan_bakar" value="Solar"> Solar</label>
                             </p>
                             <p>
                                 <input type="submit" value="Daftar" name="daftar" />
