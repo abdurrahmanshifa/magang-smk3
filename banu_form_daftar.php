@@ -4,7 +4,7 @@
 <head>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>AdminLTE 3 | Dashboard</title>
+     <title>AdminLTE 3 | Daftar</title>
 
      <!-- Google Font: Source Sans Pro -->
      <link rel="stylesheet"
@@ -92,14 +92,14 @@
                               <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                          </div>
                          <div class="info">
-                              <a href="#" class="d-block">Abdurrahman Shifa</a>
+                              <a href="#" class="d-block">Banu Eka Prayoga</a>
                          </div>
                     </div>
                     <!-- Sidebar Menu -->
                     <nav class="mt-2">
                          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                               <li class="nav-item">
-                                   <a href="index.php" class="nav-link active">
+                                   <a href="index.php" class="nav-link">
                                         <i class="nav-icon fas fa-th"></i>
                                         <p>
                                              Beranda
@@ -107,7 +107,7 @@
                                    </a>
                               </li>
                               <li class="nav-item">
-                                   <a href="banu.php" class="nav-link">
+                                   <a href="banu.php" class="nav-link active">
                                         <i class="nav-icon fas fa-th"></i>
                                         <p>
                                              Banu
@@ -128,7 +128,7 @@
                     <div class="container-fluid">
                          <div class="row mb-2">
                               <div class="col-sm-6">
-                                   <h1 class="m-0">Dashboard</h1>
+                                   <h1 class="m-0">Form Pendaftaran Kendaraan</h1>
                               </div><!-- /.col -->
                               <div class="col-sm-6">
                                    <ol class="breadcrumb float-sm-right">
@@ -143,74 +143,43 @@
 
                <!-- Main content -->
                <section class="content">
-                    <div class="container-fluid">
-                         <!-- Small boxes (Stat box) -->
-                         <div class="row">
-                              <div class="col-lg-3 col-6">
-                                   <!-- small box -->
-                                   <div class="small-box bg-info">
-                                        <div class="inner">
-                                             <h3>150</h3>
-
-                                             <p>New Orders</p>
-                                        </div>
-                                        <div class="icon">
-                                             <i class="ion ion-bag"></i>
-                                        </div>
-                                        <a href="#" class="small-box-footer">More info <i
-                                                  class="fas fa-arrow-circle-right"></i></a>
-                                   </div>
-                              </div>
-                              <!-- ./col -->
-                              <div class="col-lg-3 col-6">
-                                   <!-- small box -->
-                                   <div class="small-box bg-success">
-                                        <div class="inner">
-                                             <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                                             <p>Bounce Rate</p>
-                                        </div>
-                                        <div class="icon">
-                                             <i class="ion ion-stats-bars"></i>
-                                        </div>
-                                        <a href="#" class="small-box-footer">More info <i
-                                                  class="fas fa-arrow-circle-right"></i></a>
-                                   </div>
-                              </div>
-                              <!-- ./col -->
-                              <div class="col-lg-3 col-6">
-                                   <!-- small box -->
-                                   <div class="small-box bg-warning">
-                                        <div class="inner">
-                                             <h3>44</h3>
-
-                                             <p>User Registrations</p>
-                                        </div>
-                                        <div class="icon">
-                                             <i class="ion ion-person-add"></i>
-                                        </div>
-                                        <a href="#" class="small-box-footer">More info <i
-                                                  class="fas fa-arrow-circle-right"></i></a>
-                                   </div>
-                              </div>
-                              <!-- ./col -->
-                              <div class="col-lg-3 col-6">
-                                   <!-- small box -->
-                                   <div class="small-box bg-danger">
-                                        <div class="inner">
-                                             <h3>65</h3>
-
-                                             <p>Unique Visitors</p>
-                                        </div>
-                                        <div class="icon">
-                                             <i class="ion ion-pie-graph"></i>
-                                        </div>
-                                        <a href="#" class="small-box-footer">More info <i
-                                                  class="fas fa-arrow-circle-right"></i></a>
-                                   </div>
-                              </div>
-                              <!-- ./col -->
-                         </div>
+                   <div class="container-fluid">
+                       <form action="banu_proses_daftar.php" method="POST">
+                       
+                        <fieldset>
+                            
+                            <p>
+                                <label for="jenis_kendaraan">Jenis Kendaraan: </label>
+                                <select name="jenis_kendaraan">
+                                    <option>Mobil</option>
+                                    <option>Motor</option>
+                                    <option>Bus</option>
+                                    <option>Truk</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="warna_kendaraan">Warna: </label>
+                                <input type="text" name="warna_kendaraan" placeholder="warna kendaraan" />
+                            </p>
+                            <p>
+                                <label for="plat_kendaraan">Plat Kendaraan: </label>
+                                <input type="text" name="plat_kendaraan" placeholder="plat kendaraan" /> 
+                            </p>
+                            <p>
+                                <label for="bahan_bakar">Bahan Bakar: </label>
+                                <label><input type="radio" name="bahan_bakar" value="bensin"> Bensin</label>
+                                <label><input type="radio" name="bahan_bakar" value="solar"> Solar</label>
+                            </p>
+                            <p>
+                                <input type="submit" value="Daftar" name="daftar" />
+                            </p>
+                            <nav>
+                                <a href="banu.php">Kembali</a>
+                            </nav>
+                    
+                        </fieldset>
+                
+                    </form>
                          
                          <!-- /.row (main row) -->
                     </div><!-- /.container-fluid -->
