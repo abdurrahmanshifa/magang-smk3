@@ -130,7 +130,7 @@
                     <div class="container-fluid">
                          <div class="row mb-2">
                               <div class="col-sm-6">
-                                   <h1 class="m-0">List Kendaraan</h1>
+                                   <h1 class="m-0">Kendaraan</h1>
                               </div><!-- /.col -->
                               <div class="col-sm-6">
                                    <ol class="breadcrumb float-sm-right">
@@ -144,22 +144,42 @@
                <!-- /.content-header -->
 
                <!-- Main content -->
-               <section class="content">
-                    <div class="container-fluid">
-                         <!-- ./tab -->
-                         <div class="tab">
-                         <table border="2">
-                              <thead>
-                                   <tr>
-                                        <th>No</th>
-                                        <th>Jenis Kendaraan</th>
-                                        <th>Warna Kendaraan</th>
-                                        <th>Plat Kendaraan</th>
-                                        <th>Bahan Bakar</th>
-                                        <th>Tindakan</th>
-                                   </tr>
-                              </thead>
-                              <tbody>
+               <!-- row -->
+               <div class="row">
+                    <div class="col-12">     
+                         <div class="card">
+                              <div class="card-header">
+                                   <h3 class="card-title">List Kendaraan</h3>
+
+                                   <div class="card-tools">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                             <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                                             <div class="input-group-append">
+                                                  <button type="submit" class="btn btn-default">
+                                                       <i class="fas fa-search"></i>
+                                                  </button>
+                                             </div>
+                                             <nav class=>
+                                                  <a href="banu_form_daftar.php">[+] Tambah Data</a>
+                                             </nav>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- ./tab -->
+                              <div class="card-body table-responsive p-0" style="height: 300px;">
+                                   <table class="table table-head-fixed text-nowrap">
+                                        <thead>
+                                             <tr>
+                                                  <th>No</th>
+                                                  <th>Jenis Kendaraan</th>
+                                                  <th>Warna Kendaraan</th>
+                                                  <th>Plat Kendaraan</th>
+                                                  <th>Bahan Bakar</th>
+                                                  <th>Tindakan</th>
+                                             </tr>
+                                        </thead>
+                                   <tbody>
                                    <?php
                                    $sql = "SELECT * FROM jenis_kendaraan";
                                    $query = mysqli_query($db, $sql);
@@ -181,25 +201,24 @@
                                         echo "</tr>";
                                    }
                                    ?>
-                              </tbody>
-                              </table>
-                              <p>Total: <?php echo mysqli_num_rows($query) ?></p>
-                              <nav>
-                                   <a href="banu_form_daftar.php">[+] Tambah Data</a>
-                              </nav>
-                              <?php if(isset($_GET['status'])): ?>
-                                   <p>
-                                        <?php
-                                        if($_GET['status'] == 'sukses'){
-                                             echo "Pendaftaran siswa baru berhasil!";
-                                        } else {
-                                             echo "Pendaftaran gagal!";
-                                        }
-                                        ?>
-                                   </p>
-                              <?php endif; ?>
+                                   </tbody>
+                                   </table>
+                                   <p>Total: <?php echo mysqli_num_rows($query) ?></p>
+
+                                   <?php if(isset($_GET['status'])): ?>
+                                        <p>
+                                             <?php
+                                             if($_GET['status'] == 'sukses'){
+                                                  echo "Pendaftaran jenis kendaraan baru berhasil!";
+                                             } else {
+                                                  echo "Pendaftaran gagal!";
+                                             }
+                                             ?>
+                                        </p>
+                                   <?php endif; ?>
                          </div>
                     </div>
+               </div>
                          
                          <!-- /.row (main row) -->
                     </div><!-- /.container-fluid -->
