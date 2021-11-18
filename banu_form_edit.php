@@ -133,7 +133,7 @@ if( mysqli_num_rows($query) < 1 ){
                               </li>
                               <li class="nav-item">
                                    <a href="banu.php" class="nav-link active">
-                                        <i class="nav-icon fas fa-th"></i>
+                                        <i class="nav-icon fas fa-warehouse"></i>
                                         <p>
                                              Banu
                                         </p>
@@ -170,43 +170,40 @@ if( mysqli_num_rows($query) < 1 ){
                <section class="content">
                    <div class="container-fluid">
                        <form action="banu_proses_edit.php" method="POST">
-                       
-                        <fieldset>
+                          <div class="card-body">
+                              <div class="form-group">
                                 <input type="hidden" name="id" value="<?php echo $kendaraan['id'] ?>" />
-                            <p>
-                                <label for="jenis_kendaraan">Jenis Kendaraan: </label>
-                                <?php $jenis_kendaraan = $kendaraan['jenis_kendaraan']; ?>
-                                <select name="jenis_kendaraan">
-                                    <option <?php echo ($kendaraan == 'Mobil') ? "selected": "" ?>>Mobil</option>
-                                    <option <?php echo ($kendaraan == 'Motor') ? "selected": "" ?>>Motor</option>
-                                    <option <?php echo ($kendaraan == 'Bus') ? "selected": "" ?>>Bus</option>
-                                    <option <?php echo ($kendaraan == 'Truk') ? "selected": "" ?>>Truk</option>
-                                </select>
-                            </p>
-                            <p>
-                                <label for="warna_kendaraan">Warna Kendaraan: </label>
-                                <input type="text" name="warna_kendaraan" placeholder="warna kendaraan" value="<?php echo $kendaraan['warna_kendaraan'] ?>" />
-                            </p>
-                            <p>
-                                <label for="plat_kendaraan">Plat Kendaraan: </label>
-                                <input type="text" name="plat_kendaraan" placeholder="plat kendaraan" value="<?php echo $kendaraan['plat_kendaraan'] ?>"/> 
-                            </p>
-                            <p>
-                                <label for="bahan_bakar">Bahan Bakar: </label>
-                                <?php $bahan_bakar = $kendaraan['bahan_bakar']; ?>
-                                <label><input type="radio" name="bahan_bakar" value="Bensin" <?php echo ($bahan_bakar == 'bensin') ? "checked": "" ?>> Bensin</label>
-                                <label><input type="radio" name="bahan_bakar" value="Solar" <?php echo ($bahan_bakar == 'solar') ? "checked": "" ?>> Solar</label>
-                            </p>
-                            <p>
-                                <input type="submit" value="Simpan" name="simpan" />
-                            </p>
-                            <nav>
-                                <a href="banu.php">Kembali</a>
-                            </nav>
-                    
-                        </fieldset>
-                
-                    </form>
+                                   <p>
+                                        <label for="jenis_kendaraan">Jenis Kendaraan: </label>
+                                        <?php $jenis_kendaraan = $kendaraan['jenis_kendaraan']; ?>
+                                        <select name="jenis_kendaraan" class="form-control form-control-border" style="width: 10%;">
+                                             <option <?php echo ($kendaraan == 'Mobil') ? "selected": "" ?>>Mobil</option>
+                                             <option <?php echo ($kendaraan == 'Motor') ? "selected": "" ?>>Motor</option>
+                                             <option <?php echo ($kendaraan == 'Bus') ? "selected": "" ?>>Bus</option>
+                                             <option <?php echo ($kendaraan == 'Truk') ? "selected": "" ?>>Truk</option>
+                                        </select>
+                                   </p>
+                                   <p>
+                                        <label for="warna_kendaraan">Warna Kendaraan: </label>
+                                        <input type="text" name="warna_kendaraan" class="form-control form-control-border" style="width: 25%;" placeholder="warna kendaraan" value="<?php echo $kendaraan['warna_kendaraan'] ?>" />
+                                   </p>
+                                   <p>
+                                        <label for="plat_kendaraan">Plat Kendaraan: </label>
+                                        <input type="text" name="plat_kendaraan" class="form-control form-control-border" style="width: 20%;" placeholder="plat kendaraan" value="<?php echo $kendaraan['plat_kendaraan'] ?>"/> 
+                                   </p>
+                                   <p>
+                                        <label for="bahan_bakar">Bahan Bakar: </label>
+                                        <?php $bahan_bakar = $kendaraan['bahan_bakar']; ?>
+                                        <label><input type="radio" name="bahan_bakar" value="Bensin" <?php echo ($bahan_bakar == 'bensin') ? "checked": "" ?>> Bensin</label>
+                                        <label><input type="radio" name="bahan_bakar" value="Solar" <?php echo ($bahan_bakar == 'solar') ? "checked": "" ?>> Solar</label>
+                                   </p>
+                                   <p>
+                                        <input type="submit" value="Simpan" name="simpan" class="btn btn-primary"/>
+                                        <a href="banu.php"class="btn btn-danger">Kembali</a>
+                                   </p>
+                              </div>
+                          </div>
+                      </form>
                          
                          <!-- /.row (main row) -->
                     </div><!-- /.container-fluid -->

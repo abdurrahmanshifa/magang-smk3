@@ -108,7 +108,7 @@
                               </li>
                               <li class="nav-item">
                                    <a href="banu.php" class="nav-link active">
-                                        <i class="nav-icon fas fa-th"></i>
+                                        <i class="nav-icon fas fa-warehouse"></i>
                                         <p>
                                              Banu
                                         </p>
@@ -145,41 +145,37 @@
                <section class="content">
                    <div class="container-fluid">
                        <form action="banu_proses_daftar.php" method="POST">
-                       
-                        <fieldset>
-                            
-                            <p>
-                                <label for="jenis_kendaraan">Jenis Kendaraan: </label>
-                                <select name="jenis_kendaraan">
-                                    <option>Mobil</option>
-                                    <option>Motor</option>
-                                    <option>Bus</option>
-                                    <option>Truk</option>
-                                </select>
-                            </p>
-                            <p>
-                                <label for="warna_kendaraan">Warna: </label>
-                                <input type="text" name="warna_kendaraan" placeholder="warna kendaraan" />
-                            </p>
-                            <p>
-                                <label for="plat_kendaraan">Plat Kendaraan: </label>
-                                <input type="text" name="plat_kendaraan" placeholder="plat kendaraan" /> 
-                            </p>
-                            <p>
-                                <label for="bahan_bakar">Bahan Bakar: </label>
-                                <label><input type="radio" name="bahan_bakar" value="Bensin"> Bensin</label>
-                                <label><input type="radio" name="bahan_bakar" value="Solar"> Solar</label>
-                            </p>
-                            <p>
-                                <input type="submit" value="Daftar" name="daftar" />
-                            </p>
-                            <nav>
-                                <a href="banu.php">Kembali</a>
-                            </nav>
-                    
-                        </fieldset>
-                
-                    </form>
+                         <div class="card-body">
+                              <div class="form-group">
+                                   <p>
+                                        <label for="jenis_kendaraan">Jenis Kendaraan: </label>
+                                        <select name="jenis_kendaraan"  class="form-control form-control-border" style="width: 10%;">
+                                             <option>Mobil</option>
+                                             <option>Motor</option>
+                                             <option>Bus</option>
+                                             <option>Truk</option>
+                                        </select>
+                                   </p>
+                                   <p>
+                                        <label for="warna_kendaraan">Warna: </label>
+                                        <input type="text" name="warna_kendaraan"  class="form-control form-control-border" style="width: 25%;" placeholder="warna kendaraan" />
+                                   </p>
+                                   <p>
+                                        <label for="plat_kendaraan">Plat Kendaraan: </label>
+                                        <input type="text" name="plat_kendaraan" class="form-control form-control-border" style="width: 20%;" placeholder="plat kendaraan" /> 
+                                   </p>
+                                   <p>
+                                        <label for="bahan_bakar">Bahan Bakar: </label>
+                                        <label><input type="radio" name="bahan_bakar" value="Bensin"> Bensin</label>
+                                        <label><input type="radio" name="bahan_bakar" value="Solar"> Solar</label>
+                                   </p>
+                                   <p>
+                                        <input type="submit" value="Daftar" name="daftar" class="btn btn-primary"/>
+                                        <a href="banu.php" class="btn btn-danger">Kembali</a>
+                                   </p>
+                              </div>
+                         </div>
+                     </form>
                          
                          <!-- /.row (main row) -->
                     </div><!-- /.container-fluid -->

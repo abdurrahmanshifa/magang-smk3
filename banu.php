@@ -110,7 +110,7 @@
                               </li>
                               <li class="nav-item">
                                    <a href="banu.php" class="nav-link active">
-                                        <i class="nav-icon fas fa-th"></i>
+                                        <i class="nav-icon fas fa-warehouse"></i>
                                         <p>
                                              Banu
                                         </p>
@@ -160,9 +160,11 @@
                                                        <i class="fas fa-search"></i>
                                                   </button>
                                              </div>
-                                             <nav class=>
-                                                  <a href="banu_form_daftar.php">[+] Tambah Data</a>
-                                             </nav>
+                                             <div class="card-header">
+                                                  <div class="card-title" style="width: 150px;">
+                                                       <a href="banu_form_daftar.php" class="far fa-plus-square"> Tambah Data</a>
+                                                  </div>
+                                             </div>
                                         </div>
                                    </div>
                               </div>
@@ -177,6 +179,7 @@
                                                   <th>Plat Kendaraan</th>
                                                   <th>Bahan Bakar</th>
                                                   <th>Tindakan</th>
+                                                  <th>Aksi</th>
                                              </tr>
                                         </thead>
                                    <tbody>
@@ -194,11 +197,16 @@
                                         echo "<td>".$kendaraan['bahan_bakar']."</td>";
                                              
                                         echo "<td>";
-                                        echo "<a href='banu_form_edit.php?id=".$kendaraan['id']."'>Edit</a> | ";
-                                        echo "<a href='banu_hapus.php?id=".$kendaraan['id']."'>Hapus</a>";
+                                        echo "<a href='banu_form_edit.php?id=".$kendaraan['id']."'class='btn btn-info btn-sm'><i class='fas fa-edit'></i> Edit</a> | ";
+                                        echo "<a href='banu_hapus.php?id=".$kendaraan['id']."' class='btn btn-danger btn-sm'><i class='far fa-trash-alt'></i> Delete</a>";
+                                        echo "</td>";
+                                        echo "<td>";
+                                        echo "<a href='banu_detail_list.php?id=".$kendaraan['id']."'class='btn btn-primary btn-sm'><i class='fas fa-folder'></i> Lihat Detail</a";
                                         echo "</td>";
                                              
                                         echo "</tr>";
+                                        
+                                        
                                    }
                                    ?>
                                    </tbody>
