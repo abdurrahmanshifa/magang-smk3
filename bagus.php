@@ -151,7 +151,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Fixed Header Table</h3>
+                <h3 class="card-title">Dashboard</h3>
 
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -166,8 +166,8 @@
                 </div>
               </div>
               <!-- /.card-header -->
-              <div class="card-body table-responsive p-0" style="height: 300px;">
-                <table class="table table-head-fixed text-nowrap">
+              <div class="card-body">
+                <table class="table table-bordered table-hover">
                   <thead>
                     <tr>
                       <th>No</th>
@@ -196,8 +196,9 @@
                                         
                                              
                                         echo "<td>";
-                                        echo "<a href='bagus-form-edit.php?id=".$menu['id']."'>Edit</a> | ";
-                                        echo "<a href='bagus-hapus.php?id=".$menu['id']."'>Hapus</a>";
+                                        echo "<a href='bagus-form-edit.php?id=".$menu['id']."' class='small .btn-app'>
+                                        <i class='fas fa-edit'></i> Edit</a> | ";
+                                        echo "<a href='bagus-hapus.php?id=".$menu['id']."' class='fas fa-trash'></a>"; 
                                         echo "</td>";
                                              
                                         echo "</tr>";
@@ -207,7 +208,10 @@
                               </table>
                               <p>Total: <?php echo mysqli_num_rows($query) ?></p>
                               <nav>
-                                   <a href="bagus-form-daftar.php">[+] Tambah Data</a>
+                                   <a href="bagus-form-daftar.php" class="big .btn-app bg-danger">
+                                   <span class="badge bg-teal"></span>
+                                   <i class="fas fa-inbox"></i> Orders</a>
+                                   
                               </nav>
                               <?php if(isset($_GET['status'])): ?>
                                    <p>

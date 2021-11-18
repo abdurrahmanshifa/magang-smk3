@@ -141,12 +141,12 @@
                             
                             <p>
                                 <label for="nomor_meja">Nomor Meja: </label>
-                                <input type="text" name="nomor_meja" placeholder="Nomor Meja" /> 
+                                <input type="text" name="nomor_meja" class="form-control form-control-border" style="width: 25%;" placeholder="Nomor Meja" /> 
                             </p>
                             <p>
                             <div class="form-group">
                                 <label for="daftar_makanan">Aneka Makanan <code></code></label>
-                                <select class="custom-select form-control-border" name="daftar_makanan" id="exampleSelectBorder">
+                                <select class="custom-select form-control-border" name="daftar_makanan" id="exampleSelectBorder" style="width: 20%;">
                                     <option>None</option>
                                     <option>Nasi Goreng</option>
                                     <option>Ayam Goreng</option>
@@ -159,7 +159,7 @@
                             <p>
                             <div class="form-group">
                                 <label for="daftar_minuman">Aneka Minuman <code></code></label>
-                                <select class="custom-select form-control-border" name="daftar_minuman" id="exampleSelectBorder">
+                                <select class="custom-select form-control-border" name="daftar_minuman" id="exampleSelectBorder" style="width: 20%;">
                                     <option>None</option>
                                     <option>Milk</option>
                                     <option>Coffee</option>
@@ -171,7 +171,7 @@
 
                             <p>
                                 <label for="porsi">Porsi: </label>
-                                <input type="text" name="porsi" placeholder="Porsi" /> 
+                                <input type="text" name="porsi" class="form-control form-control-border" style="width: 25%;" placeholder="Untuk Berapa Orang" /> 
                             </p>
                             <p>
                                 <label for="opsi">Opsi: </label>
@@ -179,7 +179,7 @@
                                 <label><input type="radio" name="opsi" value="Makan Di Tempat"> Makan Di Tempat</label>
                             </p>
                             <p>
-                                <input type="submit" value="Daftar" name="daftar" />
+                                <input type="submit" value="Pesan" name="daftar" class="big .btn-app bg-danger" />
                             </p>
                             <nav>
                                 <a href="bagus.php">Kembali</a>

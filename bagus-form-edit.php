@@ -209,7 +209,7 @@ if( mysqli_num_rows($query) < 1 ){
                                 <input type="submit" value="Simpan" name="simpan" />
                             </p>
                             <nav>
-                                <a href="bagus.php">Kembali</a>
+                                <a href="bagus  .php">Kembali</a>
                             </nav>
                     
                         </fieldset>
